@@ -19,7 +19,7 @@ class Searches {
         return this.history.map( place => {
 
             let words = place.split(' ');
-            words = words.map( w => p[0].toUpperCase() + p.substring(1));
+            words = words.map( w => w[0].toUpperCase() + w.substring(1));
 
             return words.join(' ');
         });
@@ -99,6 +99,7 @@ class Searches {
         if (this.history.includes( place.toLocaleLowerCase())){
             return;
         }
+        this.history = this.history.splice(0,5);
         // revisar con gus porq no hace el unshift
         this.history.unshift( place.toLocaleLowerCase() );
 

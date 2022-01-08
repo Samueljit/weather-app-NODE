@@ -1,0 +1,27 @@
+{
+  "name": "05-weather-app-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samueljit/weather-app-NODE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Samueljit/weather-app-NODE/issues"
+  },
+  "homepage": "https://github.com/Samueljit/weather-app-NODE#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "color": "^4.1.0",
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "inquirer": "^8.2.0"
+  }
+}

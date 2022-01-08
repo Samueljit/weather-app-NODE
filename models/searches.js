@@ -9,7 +9,6 @@ class Searches {
 
     constructor() {
 
-        // TODO: leer DB si existe
         this.readDB();
 
     }
@@ -46,7 +45,7 @@ class Searches {
 
        
         try{ 
-            // Petición http
+            // petition http
             
             const instance = axios.create({
                 baseURL: `https://api.mapbox.com/geocoding/v5/mapbox.places/${place}.json`,
@@ -63,7 +62,7 @@ class Searches {
 
         } catch ( err ) {}
             
-            return []; // retornar los lugares que coincidan
+            return []; // return the match place
     
         }
 
@@ -72,7 +71,7 @@ class Searches {
 
         try {
 
-            // Peticion http
+            // petition http
             const instance = axios.create({
                 baseURL: `https://api.openweathermap.org/data/2.5/weather`,
                 params: {...this.paramsWeather, lat, lon}
@@ -100,10 +99,10 @@ class Searches {
             return;
         }
         this.history = this.history.splice(0,5);
-        // revisar con gus porq no hace el unshift
+        
         this.history.unshift( place.toLocaleLowerCase() );
 
-        // grabar en DB
+        // save DB
         this.saveDB();
 
     }
